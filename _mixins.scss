@@ -1,0 +1,4 @@
+@mixin cuadrad ($largo) {
+    width: $largo + px;
+    height: $largo +px;
+}

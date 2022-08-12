@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffe8c8;
+  border-left: 30px solid #96b8af;
+  border-right: 30px solid #96b8af;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding-top: 2rem;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 2rem;
+  margin: auto;
+  width: 1000px;
+  max-width: 100%;
+}
+.container .logo {
+  color: #96b8af;
+  font-size: 4rem;
+}
+.container h1 {
+  color: #96b8af;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4rem;
+  margin: 0;
+}
+.container h1 a {
+  transform: scale(0.7);
+}
+.container a {
+  display: inline-block;
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+}
+.container a::after {
+  background-color: #d18a74;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: skew(-30deg);
+  /*skew() define una transformación que sesga un elemento en el plano 2D*/
+  z-index: -1;
+  /* El atributo z-index te permite ajustar el orden de las capas de los objetos cuando el contenido está siendo renderizado.*/
+}
+.container .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.container .col {
+  flex: 1;
+}
+.container .col:first-child {
+  margin-right: 4rem;
+}
+.container .text {
+  font-size: 2rem;
+}
+.container .text p {
+  font-weight: 200;
+}
+.container img {
+  box-shadow: 15px 15px #d18a74;
+  margin: 3rem 0;
+}
+.container img.shadow-reverse {
+  /*para que el sombreado de la imagen izquierda quede del otro lado*/
+  box-shadow: -15px -15px #d18a74;
+}
+.container .block {
+  font-size: 2.5rem;
+  display: block;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 760px) {
+  h1 {
+    text-align: center;
+  }
+  .col {
+    text-align: center;
+  }
+  .col:first-child {
+    margin-right: 4rem;
+  }
+  .text h2, p {
+    font-size: 1.3rem;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

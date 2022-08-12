@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300&display=swap');
+
+//if i edit the file base i have to import inside of the input.scss
+// @use 'base';
+
+$primary-color: #ffe8c8;
+$secondary-color: #96b8af;
+$light-secondary: #d18a74;
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: $primary-color;
+    border-left: 30px solid $secondary-color;
+    border-right: 30px solid $secondary-color;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding-top: 2rem;
+    min-height: 100vh;
+}
+.container {
+    padding: 2rem;
+    margin: auto;
+    width: 1000px;
+    max-width: 100%;
+
+    .logo {
+        color: $secondary-color;
+        font-size: 4rem;
+    }
+    h1 {
+        color: $secondary-color;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 4rem;
+        margin: 0;
+        a {
+            transform: scale(0.7);
+        }
+    
+    }
+
+    a {
+        display: inline-block;
+        color: white;
+        padding: 1rem 2rem;
+        position: relative;
+        text-decoration: none;
+    }
+
+    a::after {
+        background-color: $light-secondary;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: skew(-30deg);
+        /*skew() define una transformación que sesga un elemento en el plano 2D*/
+        z-index: -1;
+        /* El atributo z-index te permite ajustar el orden de las capas de los objetos cuando el contenido está siendo renderizado.*/
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .col {
+        flex: 1;
+
+        &:first-child {
+            margin-right: 4rem;
+        }
+    }
+    .text {
+        font-size: 2rem;
+         p {
+            font-weight: 200;
+        }
+    }
+
+    img {
+        box-shadow: 15px 15px $light-secondary;
+        margin: 3rem 0;
+    }
+
+    img.shadow-reverse {
+        /*para que el sombreado de la imagen izquierda quede del otro lado*/
+        box-shadow: -15px -15px $light-secondary;
+    }
+
+    .block {
+        font-size: 2.5rem;
+        display: block;
+        margin-top: 5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    .col {
+        text-align: center;
+    }
+
+    .col:first-child {
+        margin-right: 4rem;
+    }
+    .text h2, p {
+        font-size: 1.3rem;
+    }
+}
